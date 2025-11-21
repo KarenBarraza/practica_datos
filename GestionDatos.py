@@ -25,10 +25,10 @@ class GestionDatos:
             if datos.cedula == cedula:
                 return datos
         
-    # def eliminarDatos(self, cedula:int):
-    #     for datos in self.lista:
-    #         if datos.cedula == cedula:
-    #             self.lista.pop(self.lista.index(datos))
+    def eliminarDatos(self, cedula:int):
+        for datos in self.lista:
+            if datos.cedula == cedula:
+                self.lista.pop(self.lista.index(datos))
 
     # def mostrarDatos(self)->List:
     #     return self.lista
