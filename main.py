@@ -14,7 +14,10 @@ while menuActivo:
     print("Menu de opciones")
     print("1. Agregar")
     print("2. Consultar")
-    print("3. Salir")
+    print("3. Modificar")
+    print("4. Eliminar")
+    print("5. Mostrar Datos")
+    print("6. Salir")
     #Se solicita que ingrese la opcion que va a elegir
     opcion=input("Ingrese una opcion: ")
 
@@ -33,6 +36,28 @@ while menuActivo:
         result=gd.consultarDatos(cedula)
         print(result.nombre,result.apellido,result.edad,result.correo,result.cedula)
     elif opcion == "3":
+        #Con esta opcion se modifican datos de la lista
+        cedula = int(input("Ingrese numero de cedula para Modificar: "))
+        dt=Datos()
+        dt.nombre = str(input("Ingrese su nombre: "))
+        dt.apellido = str(input("Ingrese su apellido: "))
+        dt.cedula = cedula
+        dt.correo = str(input("Ingrese su correo: "))
+        dt.edad = int(input("Ingrese su edad: "))
+        gd.modificarDatos(cedula, dt)
+
+    # elif opcion == "4":
+    #     #Con esta opcion se eliminan datos de la lista
+    #     cedula = int(input("Ingrese numero de cedula para Eliminar: "))
+    #     gd.eliminarDatos(cedula)
+
+    # elif opcion == "5":
+    #     #Con esta opcion se muestran todos los datos de la lista
+    #     listaDatos=gd.mostrarDatos()
+    #     for datos in listaDatos:
+    #         print(datos.nombre,datos.apellido,datos.edad,datos.correo,datos.cedula)
+    
+    elif opcion == "6":
         #Con esta opcion se sale del programa
         print("Saliendo del programa")
         
