@@ -51,11 +51,11 @@ while menuActivo:
         cedula = int(input("Ingrese numero de cedula para Eliminar: "))
         gd.eliminarDatos(cedula)
 
-    # elif opcion == "5":
-    #     #Con esta opcion se muestran todos los datos de la lista
-    #     listaDatos=gd.mostrarDatos()
-    #     for datos in listaDatos:
-    #         print(datos.nombre,datos.apellido,datos.edad,datos.correo,datos.cedula)
+    elif opcion == "5":
+        #Con esta opcion se muestran todos los datos de la lista
+        listaDatos=gd.mostrarDatos()
+        for datos in listaDatos:
+            print(datos.nombre,datos.apellido,datos.edad,datos.correo,datos.cedula)
     
     elif opcion == "6":
         #Con esta opcion se sale del programa

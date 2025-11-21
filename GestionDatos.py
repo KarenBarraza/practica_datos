@@ -30,8 +30,8 @@ class GestionDatos:
             if datos.cedula == cedula:
                 self.lista.pop(self.lista.index(datos))
 
-    # def mostrarDatos(self)->List:
-    #     return self.lista
+    def mostrarDatos(self)->List:
+        return self.lista
     
     def modificarDatos(self, cedula:int, nuevos_datos:Datos):
         for i in range(len(self.lista)):
