@@ -34,7 +34,8 @@ while menuActivo:
         #Con esta opcion se consultan datos de la lista
         cedula = int(input("Ingrese numero de cedula para la Consulta: "))
         result=gd.consultarDatos(cedula)
-        print(result.nombre,result.apellido,result.edad,result.correo,result.cedula)
+        print("Nombre: ",result.nombre,"Apellido: ",result.apellido,"Edad: ",result.edad,"Correo Electronico:",result.correo,"Num Documento: ",result.cedula)
+    
     elif opcion == "3":
         #Con esta opcion se modifican datos de la lista
         cedula = int(input("Ingrese numero de cedula para Modificar: "))
@@ -55,7 +56,7 @@ while menuActivo:
         #Con esta opcion se muestran todos los datos de la lista
         listaDatos=gd.mostrarDatos()
         for datos in listaDatos:
-            print(datos.nombre,datos.apellido,datos.edad,datos.correo,datos.cedula)
+            print("Nombre: ",datos.nombre,"Apellido: ",datos.apellido,"Edad: ",datos.edad,"Correo Electronico:",datos.correo,"Num Documento: ",datos.cedula)
     
     elif opcion == "6":
         #Con esta opcion se sale del programa

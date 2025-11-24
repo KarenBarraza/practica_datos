@@ -24,15 +24,18 @@ class GestionDatos:
         for datos in self.lista:
             if datos.cedula == cedula:
                 return datos
-        
+    
+    #se crea la funcion q permite eliminar datos de la lista    
     def eliminarDatos(self, cedula:int):
         for datos in self.lista:
             if datos.cedula == cedula:
                 self.lista.pop(self.lista.index(datos))
-
+    
+    #se crea la funcion que nos va a mostrar los datos que ingresamos a la lista
     def mostrarDatos(self)->List:
         return self.lista
     
+    #se crea la funcion que nos permite modificar los datos de la lista
     def modificarDatos(self, cedula:int, nuevos_datos:Datos):
         for i in range(len(self.lista)):
             if self.lista[i].cedula == cedula:
